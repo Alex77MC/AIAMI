@@ -1,6 +1,7 @@
 package net.alex77.insaneadvent;
 
 import com.mojang.logging.LogUtils;
+import net.alex77.insaneadvent.block.ModBlocks;
 import net.alex77.insaneadvent.item.ModItems;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
@@ -37,6 +38,8 @@ public class InsaneAdvent
         MinecraftForge.EVENT_BUS.register(this);
 
         ModItems.register(modEventBus);
+        ModBlocks.register(modEventBus);
+
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);
 
@@ -54,6 +57,14 @@ public class InsaneAdvent
     {
         if (event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
             event.accept(ModItems.ENDERITE);
+        }
+
+        if (event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
+            event.accept(ModItems.RAW_ENDERITE);
+        }
+
+        if (event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
+            event.accept(ModBlocks.ENDERITE_BLOCK);
         }
     }
 

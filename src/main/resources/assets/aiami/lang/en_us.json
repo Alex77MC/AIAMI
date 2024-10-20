@@ -1,3 +1,6 @@
 {
-  "item.aiami.enderite": "Enderite"
+  "item.aiami.enderite": "Enderite Ingot",
+  "item.aiami.raw_enderite": "Raw Enderite",
+
+  "block.aiami.enderite_block": "Block of Enderite"
 }

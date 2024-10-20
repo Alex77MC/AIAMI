@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "aiami:block/enderite_block"
+    }
+  }
+}
